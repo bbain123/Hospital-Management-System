@@ -1,0 +1,259 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/background.png'); /* Replace with the path to the hospital image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 12px;
+    border: 2px solid #004085;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #004085;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 22px;
+    border-bottom: 2px solid #004085;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #0069d9;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #0069d9, #004085);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+.nav-links a {
+    margin: 0 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #ffffff;
+    color: #004085;
+}
+
+/* Form and Dropdown Styles */
+.filter-form, .form-row {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: auto;
+}
+
+input[type="submit"] {
+    padding: 8px 16px;
+    background-color: #004085;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0069d9;
+}
+
+/* Table Styling */
+.doctor-table, .patient-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.doctor-table th, .doctor-table td, .patient-table th, .patient-table td {
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+    font-size: 16px;
+}
+
+.doctor-table th, .patient-table th {
+    background-color: #004085;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.doctor-table tr:nth-child(even), .patient-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.doctor-table tr:hover, .patient-table tr:hover {
+    background-color: #e2e6ea;
+}
+
+/* Description Block */
+.description {
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f9f9fc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: left;
+}
+
+.description p, .description li {
+    font-size: 16px;
+}
+
+.description ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Form Row Styling */
+.form-row {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 0; /* Add vertical padding */
+}
+
+.form-row label {
+    width: 200px; /* Ensure labels have a consistent width */
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.form-row input, .form-row select {
+    padding: 10px 15px; /* Increase padding for better visual appeal */
+    font-size: 16px;
+    width: 350px; /* Make inputs wider for a more spacious look */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-row input:focus, .form-row select:focus {
+    border-color: #004085;
+    box-shadow: 0 0 5px rgba(0, 64, 133, 0.5);
+}
+
+.form-row input[type="submit"] {
+    width: auto;
+    padding: 12px 20px; /* Increase padding for the submit button */
+    background-color: #004085;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-row input[type="submit"]:hover {
+    background-color: #0069d9;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.form-row input[type="submit"]:active {
+    transform: scale(1);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .nav-links a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .doctor-table th, .doctor-table td, .patient-table th, .patient-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .form-row label {
+        width: auto;
+    }
+
+    .form-row input, .form-row select {
+        width: auto;
+    }
+}
