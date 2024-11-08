@@ -1,7 +1,7 @@
 <?php
 $dbhost = "localhost";
 $dbuser = "Brendan";
-$dbpass = "School1928!";
+$dbpass = "________";
 $dbname = "assign2db";
 $connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 if(mysqli_connect_errno()){
